@@ -87,7 +87,7 @@ public final class CountryPickerCell: UITableViewCell {
         stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12).isActive = true
     }
 
-    func set(country: Country, selectedCountry: String) {
+    func set(country: Country, selectedCountry: String?) {
         accessibilityIdentifier = country.isoCode
         countryNameLabel.text = country.isoCode.getFlag() + " " + country.localizedName
         countryCodeLabel.text = "+" + country.phoneCode

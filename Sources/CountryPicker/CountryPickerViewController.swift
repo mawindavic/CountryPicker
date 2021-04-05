@@ -111,8 +111,8 @@ public final class CountryPickerViewController: UIViewController {
     private var countries: [Country] = []
     private var filteredCountries: [Country] = []
 
-    /// selectedCountry will be shown in the first cell, default is "TR"
-    public var selectedCountry: String = "TR" {
+    /// selectedCountry will be shown in the first cell
+    public var selectedCountry: String? {
         didSet {
             if let selectedIndex = countries.firstIndex(where: { $0.isoCode == selectedCountry }) {
                 let country = countries[selectedIndex]
