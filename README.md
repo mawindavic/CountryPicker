@@ -1,6 +1,6 @@
 # CountryPicker
 
-Very simple country picker for iOS with elegant design. It uses unicode for country flags.
+Very simple country picker for iOS works with unicode country flags.
 
 ## Screenshots
 <img src= "Screenshots/iPhone-12-white.png" width="335" height = "724">|<img src= "Screenshots/iPhone-12-dark-mode.png" width="335" height = "724">| <img src= "Screenshots/iPhone-12-white-arabic.png" width="335" height = "724">
@@ -24,7 +24,7 @@ dependencies: [
 
 ## Usage
 
-Simply, you can use with presenting `CountryPickerViewController` instance in your `UIViewController` . You can alse set default country for the picker with selectedCountry variable (Default value is "TR"). For use delegate method you should conform to `CountryPickerDelegate` in your `UIViewController`.
+You can simply use with presenting `CountryPickerViewController` instance in your `UIViewController` . You can also set selected country for the picker before present. For use delegate method you should conform `CountryPickerDelegate` in your `UIViewController`.
 
 ```swift
 let countryPicker = CountryPickerViewController()
@@ -119,7 +119,7 @@ For page title and close button text you can set localized text with `Configrati
   CountryManager.shared.config.titleText = "Country Picker"
   CountryManager.shared.config.closeButtonText = "Close"
 ```
-`CountryPicker` v1.0.0 is support RTL except displaying localized phone codes.
+`CountryPicker` v1.0.1 is support RTL except displaying localized phone codes.
 
 ## What's next
 - [ ] Sample Project.
