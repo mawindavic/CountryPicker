@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Country: Codable {
+public struct Country: Codable, Equatable {
     public var phoneCode: String
     public let isoCode: String
 
@@ -22,6 +22,10 @@ public struct Country: Codable {
         if let country = CountryManager.shared.getCountries().first(where: { $0.isoCode == isoCode }) {
             self.phoneCode = country.phoneCode
         }
+    }
+    
+    public static func == (lhs: Country, rhs: Country) -> Bool {
+        return lhs.phoneCode == rhs.phoneCode && lhs.isoCode == rhs.isoCode
     }
 }
 
